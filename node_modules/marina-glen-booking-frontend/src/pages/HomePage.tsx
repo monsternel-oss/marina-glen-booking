@@ -15,7 +15,10 @@ const HomePage: React.FC = () => {
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
     position: 'relative' as const,
-    fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+    fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+    // Extend background behind the header
+    marginTop: '-80px',
+    paddingTop: '80px'
   }
 
   const overlayStyle = {
