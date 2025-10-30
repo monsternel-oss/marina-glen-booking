@@ -29,7 +29,7 @@ html {
 
 body {
   background: #0891b2 !important;
-  background-image: url('./assets/marina-beach-ocean-alt.jpg') !important;
+  background-image: url('/main-site/images/marina-beach-ocean-alt.jpg?v=1') !important;
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
