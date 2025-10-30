@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout/Layout'
 import MarinaLayout from './components/MarinaLayout'
+import BackgroundImage from './components/BackgroundImage'
 import HomePage from './pages/HomePage'
 import RoomsPage from './pages/RoomsPage'
 import BookingPageNew from './pages/BookingPageNew'
@@ -16,7 +17,9 @@ import './styles/marina-integration.css'
 
 function App() {
   return (
-    <Routes>
+    <>
+      <BackgroundImage />
+      <Routes>
       {/* Public booking routes with Marina branding */}
       <Route path="/booking-system" element={
         <MarinaLayout title="Marina Glen Holiday Resort" subtitle="Your perfect seaside escape awaits">
@@ -86,6 +89,7 @@ function App() {
         }
       />
     </Routes>
+    </>
   )
 }
 
