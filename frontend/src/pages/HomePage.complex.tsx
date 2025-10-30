@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 // import { useAppSelector } from '../hooks/redux'
-import marinaBeachOcean from '../assets/marina-beach-ocean-alt.jpg'
+// import marinaBooking from '../assets/marina-booking.jpg'
 
 const HomePage: React.FC = () => {
   // const { settings } = useAppSelector((state) => state.homepage)
@@ -9,11 +9,13 @@ const HomePage: React.FC = () => {
   const pageStyle = {
     minHeight: '100vh',
     backgroundColor: '#0891b2',
-    backgroundImage: `url(${marinaBeachOcean})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center center',
-    backgroundRepeat: 'no-repeat',
-    backgroundAttachment: 'fixed',
+    // Remove background image for now - focus on solid color
+    // backgroundImage: `url(${marinaBooking})`,
+    // backgroundSize: 'cover',
+    // backgroundPosition: 'center',
+    // backgroundRepeat: 'no-repeat',
+    // backgroundAttachment: 'fixed',
+    background: 'linear-gradient(135deg, #0891b2 0%, #0e7490 50%, #06b6d4 100%)',
     position: 'relative' as const,
     fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
   }

@@ -10,12 +10,40 @@
   ],
   "routes": [
     {
-      "src": "/main-site/(.*)",
-      "dest": "/main-site/$1"
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/booking-system$",
+      "dest": "/index.html"
     },
     {
       "src": "/booking-system/(.*)",
       "dest": "/index.html"
+    },
+    {
+      "src": "/main-site/(.*)",
+      "dest": "/main-site/$1"
+    },
+    {
+      "src": "/(.*\\.(js|css|jpg|png|svg|ico))",
+      "dest": "/$1"
+    },
+    {
+      "src": "/images/(.*)",
+      "dest": "/main-site/images/$1"
+    },
+    {
+      "src": "/styles/(.*)",
+      "dest": "/main-site/styles/$1"
+    },
+    {
+      "src": "/scripts/(.*)",
+      "dest": "/main-site/scripts/$1"
+    },
+    {
+      "src": "/$",
+      "dest": "/main-site/index.html"
     },
     {
       "src": "/(.*)",

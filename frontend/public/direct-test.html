@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marina Glen Holiday Resort</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #0891b2 !important;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: white;
+        }
+        
+        .container {
+            min-height: 100vh;
+            padding: 40px;
+            background-color: #0891b2;
+        }
+        
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 16px;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: 0 20px 25px -5px rgba(8, 145, 178, 0.15);
+        }
+        
+        .title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #0891b2;
+            font-weight: bold;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #666;
+        }
+        
+        .description {
+            font-size: 1rem;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .button {
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .button-primary {
+            background-color: #0891b2;
+            color: white;
+        }
+        
+        .button-secondary {
+            background-color: #f97316;
+            color: white;
+        }
+        
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .features {
+            margin-top: 60px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .feature {
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        
+        .feature-title {
+            color: #0891b2;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+        
+        .feature-text {
+            color: #666;
+        }
+        
+        .debug {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div class="debug">
+        ✓ Pure HTML/CSS<br/>
+        ✓ Direct Vercel Test<br/>
+        ✓ No React/Build Process
+    </div>
+    
+    <div class="container">
+        <div class="card">
+            <h1 class="title">Marina Glen Holiday Resort</h1>
+            <p class="subtitle">Your Ocean Paradise Awaits</p>
+            <p class="description">
+                Experience luxury accommodation with breathtaking ocean views, world-class amenities, 
+                and unforgettable memories at South Africa's premier holiday destination.
+            </p>
+            
+            <div class="buttons">
+                <a href="/booking-system/rooms" class="button button-primary">Explore Units</a>
+                <a href="/booking-system/booking" class="button button-secondary">Book Now</a>
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="card">
+                <h2 class="title">Why Choose Marina Glen?</h2>
+                
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon">🌊</div>
+                        <h3 class="feature-title">Ocean Views</h3>
+                        <p class="feature-text">Stunning panoramic ocean views from every unit</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">🏖️</div>
+                        <h3 class="feature-title">Beach Access</h3>
+                        <p class="feature-text">Direct access to pristine beaches</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">🏨</div>
+                        <h3 class="feature-title">Luxury Amenities</h3>
+                        <p class="feature-text">Modern facilities for your comfort</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        console.log('Pure HTML version loaded successfully');
+        console.log('Background color:', getComputedStyle(document.body).backgroundColor);
+        
+        // Force background color if needed
+        document.body.style.setProperty('background-color', '#0891b2', 'important');
+        
+        // Debug info
+        setTimeout(() => {
+            const debug = document.querySelector('.debug');
+            const bgColor = getComputedStyle(document.body).backgroundColor;
+            debug.innerHTML += '<br/>BG: ' + bgColor;
+        }, 100);
+    </script>
+</body>
+</html>

@@ -8,8 +8,53 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/assets/index-CPt0A9Ed.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DMtCxzMX.css">
+    <style>
+      /* CRITICAL CSS - FORCED STYLING */
+      html {
+        background: #0891b2 !important;
+        min-height: 100vh !important;
+      }
+      body {
+        background: #0891b2 !important;
+        background-color: #0891b2 !important;
+        min-height: 100vh !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+      }
+      #root {
+        background: #0891b2 !important;
+        min-height: 100vh !important;
+      }
+      /* Override any white backgrounds */
+      * {
+        background-color: unset !important;
+      }
+      html, body, #root {
+        background-color: #0891b2 !important;
+      }
+      /* Force glass effects */
+      .bg-white\/95, [class*="bg-white"] {
+        background-color: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
+      }
+      .backdrop-blur-lg {
+        backdrop-filter: blur(16px) !important;
+        -webkit-backdrop-filter: blur(16px) !important;
+      }
+    </style>
+    <script>
+      // Force background with JavaScript
+      document.addEventListener('DOMContentLoaded', function() {
+        document.documentElement.style.setProperty('background-color', '#0891b2', 'important');
+        document.body.style.setProperty('background-color', '#0891b2', 'important');
+        document.getElementById('root').style.setProperty('background-color', '#0891b2', 'important');
+        console.log('Forced blue background applied');
+      });
+    </script>
+    <script type="module" crossorigin src="/assets/index-ShByxLco.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-C7R-RAbD.css">
   </head>
   <body>
     <div id="root"></div>
