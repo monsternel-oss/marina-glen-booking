@@ -41,7 +41,10 @@ body {
 }
 
 /* Force background image everywhere */
-.background-image-component {
+.background-image-component,
+.bg-css-public,
+.bg-img-container,
+.bg-img-public-container {
   position: fixed !important;
   top: 0 !important;
   left: 0 !important;
@@ -49,6 +52,46 @@ body {
   height: 100vh !important;
   z-index: -1000 !important;
   pointer-events: none !important;
+}
+
+.bg-img-asset,
+.bg-img-public {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  display: block !important;
+}
+
+/* Multiple background attempts */
+html::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/background.jpg') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  z-index: -2000;
+  pointer-events: none;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/background.jpg') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  z-index: -1999;
+  pointer-events: none;
 }
 
 @layer base {
