@@ -28,7 +28,7 @@
 /* Global Body Styling to Match Main Website */
 body {
   font-family: var(--font-family) !important;
-  background-image: url('/main-site/images/marina-beach-ocean-alt.jpg') !important;
+  background-image: url('/marina-booking.jpg') !important;
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
@@ -43,7 +43,7 @@ body {
 
 /* Ensure HTML element also has proper background */
 html {
-  background-image: url('/main-site/images/marina-beach-ocean-alt.jpg') !important;
+  background-image: url('/marina-booking.jpg') !important;
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
