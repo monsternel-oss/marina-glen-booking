@@ -21,17 +21,65 @@ const HomePage: React.FC = () => {
     }
   }
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{ minHeight: '100vh', backgroundColor: '#0891b2' }}>
       {/* Hero Section */}
       <section 
         className="relative min-h-screen flex items-center bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url(/main-site/images/marina-beach-ocean-alt.jpg)' }}
+        style={{ 
+          backgroundImage: `url(${marinaBooking})`,
+          backgroundColor: '#0891b2',
+          minHeight: '100vh',
+          display: 'flex',
+          alignItems: 'center',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary-900/40 via-secondary-800/50 to-primary-900/60"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div 
+          className="absolute inset-0 bg-gradient-to-br from-secondary-900/40 via-secondary-800/50 to-primary-900/60"
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.5), rgba(8, 145, 178, 0.6))'
+          }}
+        ></div>
+        <div 
+          className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20"
+          style={{
+            position: 'relative',
+            maxWidth: '1280px',
+            margin: '0 auto',
+            padding: '80px 16px',
+            color: 'white'
+          }}
+        >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="bg-white/95 backdrop-blur-lg p-8 rounded-2xl shadow-ocean-lg border border-white/20 animate-fade-in-up">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-secondary-900">
+            <div 
+              className="bg-white/95 backdrop-blur-lg p-8 rounded-2xl shadow-ocean-lg border border-white/20 animate-fade-in-up"
+              style={{
+                backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                backdropFilter: 'blur(12px)',
+                padding: '32px',
+                borderRadius: '16px',
+                boxShadow: '0 20px 25px -5px rgba(8, 145, 178, 0.15)',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                color: '#0f172a'
+              }}
+            >
+              <h1 
+                className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-secondary-900"
+                style={{
+                  fontSize: '3rem',
+                  fontWeight: 'bold',
+                  marginBottom: '24px',
+                  lineHeight: '1.2',
+                  color: '#0f172a'
+                }}
+              >
                 {settings.heroTitle.includes('Marina Glen Holiday Resort') ? (
                   <>
                     {settings.heroTitle.split('Marina Glen Holiday Resort')[0]}
