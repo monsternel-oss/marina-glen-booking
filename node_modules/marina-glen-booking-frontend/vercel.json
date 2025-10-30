@@ -26,7 +26,7 @@
       "dest": "/main-site/$1"
     },
     {
-      "src": "/(.*\\.(js|css|jpg|png|svg|ico))",
+      "src": "/(.*\\.(js|css|jpg|png|svg|ico|gif|webp))$",
       "dest": "/$1"
     },
     {
@@ -46,7 +46,7 @@
       "dest": "/main-site/index.html"
     },
     {
-      "src": "/(.*)",
+      "src": "/(?!.*\\.|booking-system|assets|main-site|images|styles|scripts).*",
       "dest": "/main-site/index.html"
     }
   ]
