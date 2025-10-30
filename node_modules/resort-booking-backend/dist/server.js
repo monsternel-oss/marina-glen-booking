@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 3007;
 // Security middleware
 app.use(helmet());
 app.use(cors({
-    origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+    origin: process.env.CORS_ORIGIN || 'http://localhost:5173',
     credentials: true
 }));
 // Rate limiting
@@ -29,9 +29,16 @@ app.use('/api/', limiter);
 // Body parsing middleware
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
-// Health check endpoint
+// Health check endpoints
 app.get('/health', (_req, res) => {
     res.status(200).json({ status: 'OK', timestamp: new Date().toISOString() });
+});
+app.get('/api/health', (_req, res) => {
+    res.status(200).json({
+        status: 'healthy',
+        timestamp: new Date().toISOString(),
+        service: 'Marina Glen Booking API'
+    });
 });
 // API routes
 app.use('/api/auth', authRoutes);
