@@ -1,0 +1,30 @@
+# Render Blueprint for Marina Glen Holiday Resort Backend
+services:
+  # Backend API Service
+  - type: web
+    name: marina-glen-backend
+    env: node
+    plan: starter # Free tier available
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: DATABASE_URL
+        fromDatabase:
+          name: marina-glen-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CORS_ORIGIN
+        value: https://marinaglen.co.za
+    healthCheckPath: /api/health
+
+# PostgreSQL Database
+databases:
+  - name: marina-glen-db
+    plan: starter # Free tier: 90 days, then $7/month
+    databaseName: marina_glen_booking
+    user: marina_admin

@@ -1,0 +1,12 @@
+OCEAN BACKGROUND IMAGE NEEDED:
+
+Please add an ocean/beach image from Marina Beach, KZN with the filename:
+- marina-beach-ocean.jpg
+
+The image should be:
+- High resolution (at least 1920x1080)
+- Show the ocean view from Marina Beach, KZN
+- Good quality for use as a website background
+- In JPG format for web optimization
+
+Once you add this image, the website will automatically use it as the background.

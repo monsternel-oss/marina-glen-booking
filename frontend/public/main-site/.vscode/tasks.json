@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Launch Live Server",
+			"type": "shell",
+			"command": "echo",
+			"args": [
+				"Use Live Server extension: Right-click index.html and select 'Open with Live Server'"
+			],
+			"isBackground": false,
+			"group": "build"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Booking Preview</title>
+</head>
+<body>
+    <h1>Booking Preview Test</h1>
+    
+    <h2>Sample Booking Links:</h2>
+    <ul>
+        <li><a href="http://localhost:3002/booking-preview?id=B0001" target="_blank">Booking B0001 - John Smith</a></li>
+        <li><a href="http://localhost:3002/booking-preview?id=B0002" target="_blank">Booking B0002 - Sarah Johnson</a></li>
+        <li><a href="http://localhost:3002/booking-preview?id=B0003" target="_blank">Booking B0003 - Michael Brown</a></li>
+        <li><a href="http://localhost:3002/booking-preview?id=INVALID" target="_blank">Invalid Booking (Test Error)</a></li>
+    </ul>
+    
+    <h2>Admin Dashboard:</h2>
+    <p><a href="http://localhost:3002/admin" target="_blank">Go to Admin Dashboard</a></p>
+    
+    <h2>Instructions:</h2>
+    <ol>
+        <li>Click on the Admin Dashboard link above</li>
+        <li>Look for the 📋 button in the Actions column of the bookings table</li>
+        <li>Click the 📋 button to open the booking preview in a new tab</li>
+        <li>Verify that all booking details are displayed correctly</li>
+        <li>Test the print functionality if needed</li>
+    </ol>
+    
+    <script>
+        // Clear localStorage on page load to test fresh data
+        console.log('Current bookings in localStorage:', localStorage.getItem('resort_bookings'));
+        
+        // Show current localStorage data
+        document.addEventListener('DOMContentLoaded', function() {
+            const stored = localStorage.getItem('resort_bookings');
+            if (stored) {
+                const bookings = JSON.parse(stored);
+                console.log('Found', bookings.length, 'bookings in localStorage:', bookings);
+            } else {
+                console.log('No bookings found in localStorage');
+            }
+        });
+    </script>
+</body>
+</html>
