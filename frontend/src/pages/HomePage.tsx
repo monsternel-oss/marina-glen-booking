@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 // import { useAppSelector } from '../hooks/redux'
+import marinaBackground from '../assets/marina-beach-ocean-bg.jpg'
 
 const HomePage: React.FC = () => {
   // const { settings } = useAppSelector((state) => state.homepage)
@@ -9,7 +10,12 @@ const HomePage: React.FC = () => {
     minHeight: '100vh',
     position: 'relative' as const,
     fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-    // Remove individual background styling since it's now on body
+    backgroundImage: `url(${marinaBackground})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center center',
+    backgroundRepeat: 'no-repeat',
+    backgroundAttachment: 'fixed',
+    backgroundColor: '#0891b2',
     marginTop: '-80px',
     paddingTop: '80px'
   }
