@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 // import { useAppSelector } from '../hooks/redux'
-import marinaBackground from '../assets/marina-beach-ocean-bg.jpg'
+import marinaBackground from '../assets/marina-beach-ocean-alt.jpg'
 
 const HomePage: React.FC = () => {
   // const { settings } = useAppSelector((state) => state.homepage)

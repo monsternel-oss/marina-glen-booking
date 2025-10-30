@@ -1,5 +1,5 @@
 import React from 'react'
-import marinaBackground from '../assets/marina-beach-ocean-bg.jpg'
+import marinaBackground from '../assets/marina-beach-ocean-alt.jpg'
 
 const BackgroundImage: React.FC = () => {
   const containerStyle: React.CSSProperties = {
@@ -25,7 +25,7 @@ const BackgroundImage: React.FC = () => {
     left: 0,
     width: '100vw',
     height: '100vh',
-    backgroundImage: `url(/background.jpg)`,
+    backgroundImage: `url(/marina-beach-ocean-alt.jpg)`,
     backgroundSize: 'cover',
     backgroundPosition: 'center center',
     backgroundRepeat: 'no-repeat',
@@ -52,7 +52,7 @@ const BackgroundImage: React.FC = () => {
       {/* Method 3: IMG tag from public folder */}
       <div style={{...containerStyle, zIndex: -1002}} className="bg-img-public-container">
         <img 
-          src="/background.jpg" 
+          src="/marina-beach-ocean-alt.jpg" 
           alt="Marina Glen Ocean Background" 
           style={imageStyle}
           className="bg-img-public"

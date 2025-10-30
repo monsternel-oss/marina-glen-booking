@@ -71,7 +71,7 @@ html::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url('/background.jpg') !important;
+  background-image: url('/marina-beach-ocean-alt.jpg') !important;
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
@@ -86,7 +86,7 @@ body::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url('/background.jpg') !important;
+  background-image: url('/marina-beach-ocean-alt.jpg') !important;
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
