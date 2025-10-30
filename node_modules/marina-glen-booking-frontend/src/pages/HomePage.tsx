@@ -1,22 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 // import { useAppSelector } from '../hooks/redux'
-import marinaBeachOcean from '../assets/marina-beach-ocean-alt.jpg'
 
 const HomePage: React.FC = () => {
   // const { settings } = useAppSelector((state) => state.homepage)
 
   const pageStyle = {
     minHeight: '100vh',
-    backgroundColor: '#0891b2',
-    backgroundImage: `url(${marinaBeachOcean})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center center',
-    backgroundRepeat: 'no-repeat',
-    backgroundAttachment: 'fixed',
     position: 'relative' as const,
     fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-    // Extend background behind the header
+    // Remove individual background styling since it's now on body
     marginTop: '-80px',
     paddingTop: '80px'
   }
